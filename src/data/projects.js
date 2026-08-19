@@ -5,6 +5,7 @@
 import Images from "../assets/images/image.png"
 import UzbekMoviePng from "../assets/images/UzbekMovie.png"
 import FinalProjectPng from "../assets/icons/image.png"
+import TartobOSImage from "../assets/images/image1.png"
 export const projects = [
   {
     id: 'booklist',
@@ -63,7 +64,7 @@ export const projects = [
     title: 'TartibOS',
     objective: "Ko'plab insonlarning muammosi bo'lmish intizomsizlikni yo'qotish uhcun yaratilgan",
     description: "React.js dagi bilimlarimni mustahkamlash vatajribamni oshirish, portfolio uchun qilingan loyiha bo'lib sizning intizomingizni nazorat qiluvchi tizimdir",
-    image: FinalProjectPng,
+    image: TartobOSImage,
     tech: ["React",'JavaScript', 'antd', 'styled-components', 'router-dom', 'svgr', "Axios"],
     architecture: "React.js asosida DOM boshqaruvi, komponentlar bilan struktura qurish, dark rejim uchun styled-components bilan juda yaxshi kombinatsiya qilindi. Axios, Router-dom va boshqa plugin va freymworklar ishlatildi!",
     result: "AI vositalar bilan samarali ishlash, murakkab UI holatini frameworklar bilan boshqarish tajribasi qo'lga kiritildi.",
