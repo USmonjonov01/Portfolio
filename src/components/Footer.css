@@ -1,0 +1,69 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border-soft);
+  padding: var(--space-xl) 0 var(--space-lg);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.footer__signature {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.footer__rule {
+  stroke: var(--border-soft);
+  stroke-width: 1;
+}
+
+.footer__tick {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1;
+  opacity: 0.5;
+}
+
+.footer__quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  text-align: center;
+  color: var(--text-primary);
+  max-width: 700px;
+  margin: 0 auto var(--space-lg);
+  position: relative;
+  padding: 0 var(--space-md);
+}
+
+.footer__quote::before,
+.footer__quote::after {
+  color: var(--accent-cyan);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer__links a {
+  transition: color var(--transition-base);
+}
+
+.footer__links a:hover {
+  color: var(--accent-cyan);
+}

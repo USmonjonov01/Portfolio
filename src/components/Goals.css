@@ -1,0 +1,49 @@
+.goals__timeline {
+  position: relative;
+  max-width: 720px;
+  padding-left: var(--space-md);
+}
+
+.goals__timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(var(--accent-cyan), transparent);
+  opacity: 0.4;
+}
+
+.goals__item {
+  position: relative;
+  padding-bottom: var(--space-lg);
+  padding-left: var(--space-md);
+}
+
+.goals__item:last-child {
+  padding-bottom: 0;
+}
+
+.goals__marker {
+  position: absolute;
+  left: -33px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 0 4px rgba(255, 106, 61, 0.15);
+}
+
+.goals__year {
+  display: block;
+  color: var(--accent-amber);
+  font-size: 0.82rem;
+  margin-bottom: 0.4rem;
+}
+
+.goals__content p {
+  color: var(--text-secondary);
+  max-width: 560px;
+}

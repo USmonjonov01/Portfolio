@@ -1,0 +1,128 @@
+.dashboard {
+  position: relative;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(25, 29, 36, 0.55), rgba(10, 12, 15, 0.55));
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 106, 61, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 106, 61, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-soft);
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard__dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dashboard__dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.dashboard__dots span:nth-child(1) { background: #f4746c; }
+.dashboard__dots span:nth-child(2) { background: var(--accent-amber); }
+.dashboard__dots span:nth-child(3) { background: var(--accent-emerald); }
+
+.dashboard__title {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.dashboard__blink {
+  margin-left: auto;
+  color: var(--accent-emerald);
+  font-size: 0.6rem;
+  animation: dashboardBlink 1.4s ease-in-out infinite;
+}
+
+@keyframes dashboardBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+.skills__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.skills__group-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-amber);
+  margin-bottom: var(--space-sm);
+}
+
+.skill-bar {
+  margin-bottom: var(--space-sm);
+}
+
+.skill-bar__head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.45rem;
+  color: var(--text-primary);
+}
+
+.skill-bar__name {
+  color: var(--text-secondary);
+}
+
+.skill-bar__percent {
+  color: var(--accent-cyan);
+  font-size: 0.72rem;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.skill-bar__track {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+  height: 10px;
+}
+
+.skill-bar__seg {
+  background: var(--bg-elevated);
+  border-radius: 2px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-bar__seg.is-on {
+  background: linear-gradient(180deg, var(--accent-cyan), var(--accent-emerald));
+  box-shadow: 0 0 8px rgba(255, 106, 61, 0.45);
+}
+
+@media (max-width: 640px) {
+  .skills__grid {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+}
